@@ -9,7 +9,7 @@ For the documentation, visit [https://pkg.go.dev/github.com/frida/frida-go/frida
 * Extract the downloaded archive
 * Copy _frida-core.h_ inside your systems include directory(inside /usr/local/include/) and _libfrida-core.a_ inside your lib directory (usually /usr/local/lib).
 
-To use in your project, just execute: 
+To use in your project, just execute:
 ```bash
 $ go get github.com/frida/frida-go/frida@latest
 ```
@@ -106,8 +106,8 @@ $ go build example.go && ./example
 ```
 
 
-## download frida core mingw     binary   
-打开frida的action页面，里面找到对应的job id，点击进去，查看对应的log，找到mingw devkit upload里面下载
+## download frida core mingw     binary
+鎵撳紑frida鐨刟ction椤甸潰锛岄噷闈㈡壘鍒板搴旂殑job id锛岀偣鍑昏繘鍘伙紝鏌ョ湅瀵瑰簲鐨刲og锛屾壘鍒癿ingw devkit upload閲岄潰涓嬭浇
 https://github.com/frida/frida-core/actions/runs/14932605596/job/41952404276
 
 #cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"

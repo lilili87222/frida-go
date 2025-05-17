@@ -43,8 +43,9 @@ func main() {
 
 	fmt.Println("[*] Chosen device: ", localDev.Name())
 
-	fmt.Println("[*] Attaching to App")
-	session, err := localDev.Attach("App", nil)
+	var appName = "AppName"
+	fmt.Println("[*] Attaching to " + appName)
+	session, err := localDev.Attach(appName, nil)
 	if err != nil {
 		fmt.Println("Error occurred attaching:", err)
 		os.Exit(1)
