@@ -104,3 +104,11 @@ $ go build example.go && ./example
 [*] Received {"type":"log","level":"info","payload":"[*] open(/Users/daemon1/Library/Application Support/Telegram Desktop/tdata/user_data/cache/0/25/0FDE3ED70BCA)"}
 [*] Received {"type":"log","level":"info","payload":"[*] open(/Users/daemon1/Library/Application Support/Telegram Desktop/tdata/user_data/cache/0/8E/FD728183E115)"}
 ```
+
+
+## download frida core mingw     binary   
+打开frida的action页面，里面找到对应的job id，点击进去，查看对应的log，找到mingw devkit upload里面下载
+https://github.com/frida/frida-core/actions/runs/14932605596/job/41952404276
+
+#cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"
+#cgo windows LDFLAGS: -L"${SRCDIR}/../frida-core"
