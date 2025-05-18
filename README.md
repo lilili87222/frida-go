@@ -106,12 +106,27 @@ $ go build example.go && ./example
 ```
 
 
-## download frida core mingw     binary
+## download frida-core mingw     binary
 打开frida的action页面，里面找到对应的job id，点击进去，查看对应的log，找到mingw devkit upload里面下载
 https://github.com/frida/frida-core/actions/runs/14932605596/job/41952404276
+放入你的项目目录下的frida-core目录下
 
-#cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"
-#cgo windows LDFLAGS: -L"${SRCDIR}/../frida-core"
+how to build exameple/main.go
+```bash
+set CGO_CFLAGS=-IF:\go_workspace\frida-go-test\frida-core
+set CGO_LDFLAGS=-LF:\go_workspace\frida-go-test\frida-core 
+go build main.go
+```
+or
+```bash
+go build  -ldflags="-L F:/go_workspace/frida-go-test/frida-core" -gcflags="-I F:/go_workspace/frida-go-test/frida-core" main.go
+```
 
-or add env var FRIDA_LIB_PATH and put frida-core lib folder in it
--L"$(FRIDA_LIB_PATH)/frida-core"
+or 
+```bash
+go build  -ldflags="-L ${SRCDIR}/frida-core" -gcflags="-I ${SRCDIR}/frida-core" main.go
+```
+or
+```bash
+go build  -ldflags "-L F:/go_workspace/frida-go-test/frida-core" -gcflags "all=-I F:/go_workspace/frida-go-test/frida-core" main.go
+```
