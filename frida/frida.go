@@ -9,10 +9,10 @@ package frida
 /*
 //#cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"
 //#cgo windows LDFLAGS: -L"${SRCDIR}/../frida-core"
-#cgo LDFLAGS: -lfrida-core -lm  -L"${SRCDIR}/../frida-core" -L"$(FRIDA_LIB_PATH)/frida-core"
+#cgo LDFLAGS: -lfrida-core -lm  -L"${SRCDIR}/../frida-core" -L/frida-core
 #cgo !windows LDFLAGS: -ldl
 #cgo windows LDFLAGS: -lws2_32 -lgdi32 -lole32 -liphlpapi -lsetupapi -lpsapi -lshell32 -lshlwapi -ldnsapi -lcrypt32 -luuid -lshfolder
-#cgo CFLAGS: -I/usr/local/include/ -w -I"${SRCDIR}/../frida-core" -I"$(FRIDA_LIB_PATH)/frida-core"
+#cgo CFLAGS: -I/usr/local/include/ -w -I"${SRCDIR}/../frida-core" -I/frida-core
 #cgo windows CFLAGS: -Wno-error=incompatible-pointer-types
 #cgo darwin LDFLAGS: -lbsm -framework IOKit -framework Foundation -framework AppKit -framework Security -lpthread
 #cgo darwin CFLAGS: -Wno-error=incompatible-function-pointer-types
