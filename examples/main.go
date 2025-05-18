@@ -3,7 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"github.com/frida/frida-go/frida"
+	"github.com/lilili87222/frida-go/frida"
+
+	//"github.com/lilili87222/frida-go"
+	//"github.com/lilili87222/frida-go/frida"
 	"os"
 )
 
@@ -43,7 +46,7 @@ func main() {
 
 	fmt.Println("[*] Chosen device: ", localDev.Name())
 
-	var appName = "AppName"
+	var appName = "appname"
 	fmt.Println("[*] Attaching to " + appName)
 	session, err := localDev.Attach(appName, nil)
 	if err != nil {
