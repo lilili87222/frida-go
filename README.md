@@ -130,3 +130,5 @@ or
 ```bash
 go build  -ldflags "-L F:/go_workspace/frida-go-test/frida-core" -gcflags "all=-I F:/go_workspace/frida-go-test/frida-core" main.go
 ```
+
+ref:https://github.com/pk5ls20/frida-go/tree/feat/support-windows

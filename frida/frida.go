@@ -7,8 +7,6 @@
 package frida
 
 /*
-//#cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"
-//#cgo windows LDFLAGS: -L"${SRCDIR}/../frida-core"
 #cgo LDFLAGS: -lfrida-core -lm
 #cgo !windows LDFLAGS: -ldl
 #cgo windows LDFLAGS: -lws2_32 -lgdi32 -lole32 -liphlpapi -lsetupapi -lpsapi -lshell32 -lshlwapi -ldnsapi -lcrypt32 -luuid -lshfolder
@@ -22,7 +20,6 @@ package frida
 #cgo linux CFLAGS: -pthread
 #include <frida-core.h>
 #include "android-selinux.h"
-
 */
 import "C"
 import (
