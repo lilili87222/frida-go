@@ -112,3 +112,6 @@ https://github.com/frida/frida-core/actions/runs/14932605596/job/41952404276
 
 #cgo windows CFLAGS: -I"${SRCDIR}/../frida-core"
 #cgo windows LDFLAGS: -L"${SRCDIR}/../frida-core"
+
+or add env var FRIDA_LIB_PATH and put frida-core lib folder in it
+-L"$(FRIDA_LIB_PATH)/frida-core"
