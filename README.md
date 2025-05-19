@@ -112,15 +112,19 @@ https://github.com/frida/frida-core/actions/runs/14932605596/job/41952404276
 放入你的项目目录下的frida-core目录下
 
 
-go build -x -ldflags="-extldflags='-L F:/go_workspace/frida-go-test/frida-core'" -gcflags="all=-I F:/go_workspace/frida-go-test/frida-core" main.go
-go build -x -ldflags="-extldflags=-LF:/go_workspace/frida-go-test/frida-core -v" -tags="" -trimpath -v -gcflags="all=-I F:/go_workspace/frida-go-test/frida-core" -v main.go
-
-
-
 how to build exameple/main.go，先添项目临时环境变量，然后再编译
+goland 编译选项增加环境变量
+windows   CGO_CFLAGS=-IF:\go_workspace\webkit-debug\inspector-web\frida-core\windows-x86_64;CGO_LDFLAGS=-LF:\go_workspace\webkit-debug\inspector-web\frida-core\windows-x86_64
+mac   CGO_CFLAGS=-IF:\go_workspace\webkit-debug\inspector-web\frida-core\macos-x86_64;CGO_LDFLAGS=-LF:\go_workspace\webkit-debug\inspector-web\frida-core\macos-x86_64
+
+如果是命令行则
+set CGO_CFLAGS=-IF:\go_workspace\frida-go-test\frida-core\windows-x86_64
+set CGO_LDFLAGS=-LF:\go_workspace\frida-go-test\frida-core\windows-x86_64
+
+
 ```bash
-set CGO_CFLAGS=-IF:\go_workspace\frida-go-test\frida-core
-set CGO_LDFLAGS=-LF:\go_workspace\frida-go-test\frida-core 
+set CGO_CFLAGS=-IF:\go_workspace\frida-go-test\frida-core\windows-x86_64
+set CGO_LDFLAGS=-LF:\go_workspace\frida-go-test\frida-core\windows-x86_64
 go build main.go
 ```
 尝试下面命令但是并没成功
